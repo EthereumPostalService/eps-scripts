@@ -9,8 +9,3 @@ Scripts for interacting with the EPS.
 # RPCs
 
 - Optimism: `https://mainnet.optimism.io`
-
-# todo
-
-- [ ] Make scripts runnable if this repo is installed as a dep in node_modules
-- [ ] Optional address flag
