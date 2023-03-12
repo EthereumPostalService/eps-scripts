@@ -11,10 +11,12 @@ import { abi as EPSAbi } from "./EthereumPostalService.json";
 import { Command } from "commander";
 import { ethers } from 'ethers';
 
+let DEFAULT_ADDR = "0x2156fcCff55637317D211B62318007309378fB95";
+
 let program = new Command();
 
 program.requiredOption("-r, --rpcUrl <rpcUrl>")
-    .requiredOption("-a, --address <address>")
+    .option("-a, --address <address>", undefined, DEFAULT_ADDR)
     .parse(process.argv);
 
 run().then(_ => exit(1)).catch(err => { console.error(err); exit(-1) })
